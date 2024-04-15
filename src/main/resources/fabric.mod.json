@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "deathlinked",
+	"version": "${version}",
+	"name": "Death Linked",
+	"description": "If anyone dies, everyone dies.",
+	"authors": [
+		"Zepwreth"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/deathlinked/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.zep.deathlinked.DeathLinked"
+		],
+		"client": [
+			"net.zep.deathlinked.DeathLinkedClient"
+		],
+		"fabric-datagen": [
+			"net.zep.deathlinked.DeathLinkedDataGenerator"
+		]
+	},
+	"mixins": [
+		"deathlinked.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.9",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
